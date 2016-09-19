@@ -11,11 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.title = "Parixit Angular App";
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: '<h1>My First Angular 2 App</h1>'
+            template: "\n   <h1>{{title}}</h1>\n    <nav>\n        <a routerLink=\"/home\">Home</a>\n        <a routerLink=\"/cources\">Cources</a>\n        <a routerLink=\"/aboutUs\">AboutUs</a>\n    </nav>\n    <div class=\"outlet-border\">\n        <router-outlet></router-outlet>\n    </div>\n ",
+            styles: [
+                "\n        .outlet-border{\n            border:1px solid red;\n        }\n     "
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

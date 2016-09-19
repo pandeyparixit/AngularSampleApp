@@ -9,24 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var home_component_1 = require('./home/home.component');
-var cources_component_1 = require('./courses/cources.component');
-var aboutUs_component_1 = require('./aboutUs/aboutUs.component');
-var app_routing_1 = require('./app.routing');
-var AppModule = (function () {
-    function AppModule() {
+var AboutUsComponent = (function () {
+    function AboutUsComponent() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, cources_component_1.CourcesComponent, aboutUs_component_1.AboutUsComponent],
-            bootstrap: [app_component_1.AppComponent]
+    AboutUsComponent.prototype.ngOnInit = function () { };
+    AboutUsComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'app-aboutUs',
+            templateUrl: 'aboutUs.component.html',
+            styleUrls: ['aboutUs.component.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], AboutUsComponent);
+    return AboutUsComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.AboutUsComponent = AboutUsComponent;
+//# sourceMappingURL=aboutUs.component.js.map

@@ -9,24 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var home_component_1 = require('./home/home.component');
-var cources_component_1 = require('./courses/cources.component');
-var aboutUs_component_1 = require('./aboutUs/aboutUs.component');
-var app_routing_1 = require('./app.routing');
-var AppModule = (function () {
-    function AppModule() {
+var CourcesComponent = (function () {
+    function CourcesComponent() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, cources_component_1.CourcesComponent, aboutUs_component_1.AboutUsComponent],
-            bootstrap: [app_component_1.AppComponent]
+    CourcesComponent.prototype.ngOnInit = function () { };
+    CourcesComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'app-cources',
+            templateUrl: 'cources.component.html',
+            styleUrls: ['cources.component.html']
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], CourcesComponent);
+    return CourcesComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.CourcesComponent = CourcesComponent;
+//# sourceMappingURL=cources.component.js.map
