@@ -1,2 +1,8 @@
 # AngularSampleApp
-Hello code
+Hello Parixit Code
+
+
+Routing
+indexRoute
+fallbackRoute
+

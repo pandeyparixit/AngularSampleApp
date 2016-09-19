@@ -15,7 +15,7 @@ import { Component } from '@angular/core';
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
+            <li><a routerLink="/dashboard">Dashboard</a></li>
             <li><a routerLink="/home">Home</a></li>
             <li><a routerLink="/cources">Cources</a></li>
             <li> <a routerLink="/aboutUs">AboutUs</a></li>
@@ -40,36 +40,42 @@ import { Component } from '@angular/core';
                 <router-outlet></router-outlet>
                 <h2 class="sub-header">Section title</h2>
                 <div class="table-responsive">
-                <table class="table table-striped">
-                 <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                        <th>Header</th>
-                    </tr>
-                </thead>
-                 <tbody>
-                    <tr>
-                    <td>1,003</td>
-                    <td>Integer</td>
-                    <td>nec</td>
-                    <td>odio</td>
-                    <td>Praesent</td>
-                    </tr>
-                    <tr>
-                    <td>1,003</td>
-                    <td>libero</td>
-                    <td>Sed</td>
-                    <td>cursus</td>
-                    <td>ante</td>
-                    </tr>
-                 </tbody>
-                </table>
-            </div>
-        </div>
-    </div> 
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                                <th>Header</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>1,003</td>
+                            <td>Integer</td>
+                            <td>nec</td>
+                            <td>odio</td>
+                            <td>Praesent</td>
+                            </tr>
+                            <tr>
+                            <td>1,003</td>
+                            <td>libero</td>
+                            <td>Sed</td>
+                            <td>cursus</td>
+                            <td>ante</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+             </div>
+         </div> 
+   </div> 
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
  `,
  styles:[
      `
