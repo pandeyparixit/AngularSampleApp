@@ -1,0 +1,8 @@
+<div *ngIf="cource">
+    <h2>{{cource.name}} details!</h2>
+    <div><label>id: </label>{{cource.id}}</div>
+    <div>
+      <label>name: </label>
+      <input [(ngModel)]="cource.name" placeholder="name"/>
+    </div>
+  </div>

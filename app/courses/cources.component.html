@@ -1,1 +1,13 @@
  <h1 class="page-header">Cources</h1>
+
+
+ <h2>Cources</h2>
+ <ul class="cources">
+     <li *ngFor="let cource of cources"
+        [class.selected]="cource === selectedCource"
+        (click)="onSelect(cource)">
+        <span class="badge">{{cource.id}}</span> {{cource.name}}
+     </li>
+ </ul>
+
+ <app-cource-detail [cource]="selectedCource"></app-cource-detail>
