@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" routerLink="/dashboard">Project name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -26,51 +26,16 @@ import { Component } from '@angular/core';
         </div>
       </div>
     </nav>
-   <div class="container-fluid">
+
+    <div class="container">
         <div class="row">
-            <div class="col-sm-3 col-md-2 sidebar">
-                    <ul class="nav nav-sidebar">
-                        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Reports</a></li>
-                        <li><a href="#">Analytics</a></li>
-                        <li><a href="#">Export</a></li>
-                   </ul>
-             </div>
-             <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-                <router-outlet></router-outlet>
-                <h2 class="sub-header">Section title</h2>
-                <div class="table-responsive">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Header</th>
-                                <th>Header</th>
-                                <th>Header</th>
-                                <th>Header</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td>1,003</td>
-                            <td>Integer</td>
-                            <td>nec</td>
-                            <td>odio</td>
-                            <td>Praesent</td>
-                            </tr>
-                            <tr>
-                            <td>1,003</td>
-                            <td>libero</td>
-                            <td>Sed</td>
-                            <td>cursus</td>
-                            <td>ante</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-             </div>
-         </div> 
-   </div> 
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+     
+
+
     <footer class="footer">
       <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>
