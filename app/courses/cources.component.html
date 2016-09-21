@@ -3,11 +3,11 @@
 
  <h2>Cources</h2>
  <ul class="cources">
-     <li *ngFor="let cource of cources"
+     <li *ngFor="let cource of cources | async"
         [class.selected]="cource === selectedCource"
         (click)="onSelect(cource)">
-        <span class="badge">{{cource.id}}</span> {{cource.name}}
+        <span class="badge">{{cource.id}}</span> <a [routerLink]="[cource.id]">{{ cource.name }}</a>
+       
      </li>
  </ul>
 
- <app-cource-detail [cource]="selectedCource"></app-cource-detail>

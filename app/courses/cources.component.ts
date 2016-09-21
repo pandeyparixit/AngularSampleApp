@@ -1,46 +1,57 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Cource } from './cource'
+import {Router,ActivatedRoute} from  '@angular/router';
+
+import { Cource } from '../services/cource'
+import { CourcesService } from '../services/cources.service'
+
 import { CourceDetailComponent } from './cource-detail.component'
+
+import {Observable} from 'rxjs/Rx';
 
 @Component({
     moduleId: module.id,
     selector: 'app-cources',
     templateUrl: 'cources.component.html',
-    styleUrls: ['cources.component.css']
+    styleUrls: ['cources.component.css'],
+    providers: [CourcesService],
 })
 export class CourcesComponent implements OnInit {
 
-    cources: Cource[] = [
-        {
-            id: 1,
-            name: 'Routing'
-        },
-        {
-            id: 2,
-            name: 'Index Route'
-        },
-        {
-            id: 3,
-            name: 'Fallback Route'
-        },
-        {
-            id: 4,
-            name: 'Shell Route'
-        },
-        {
-            id: 5,
-            name: 'auxiliary Route'
-        },
-    ];
+    cources: Observable<Cource[]> ;
 
     selectedCource: Cource;
 
-    constructor() { }
+    constructor(private router: Router,
+                private route: ActivatedRoute,
+                private courcesServices:CourcesService
+    ) { }
 
-    ngOnInit() { }
+    ngOnInit() { 
+         
+         this.cources = this.courcesServices.getCources()
+                        //  .catch((err)=>{
+                        //     console.log(err);
+                        //     return Observable.of(true);
+                        // });
+    }
+         
+        // this.courcesServices.getCources().subscribe(
+        //                         res=> {
+        //                              this.cources=res
+        //                             },
+        //                         err => {
+        //                             // Log errors if any
+        //                             console.log(err);
+        //                         });
+
+       
+       
+    
 
     onSelect(cource:Cource){
         this.selectedCource = cource;
+        //this.router.navigate([cource.id], { relativeTo: this.route });
+        //this.router.navigateByUrl(`/courses/${cource}`);
     }
 }

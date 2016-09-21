@@ -9,15 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var cource_1 = require('./cource');
+var router_1 = require('@angular/router');
 var CourceDetailComponent = (function () {
-    function CourceDetailComponent() {
+    function CourceDetailComponent(route, router) {
+        var _this = this;
+        this.route = route;
+        this.router = router;
+        route.params.subscribe(function (params) {
+            _this.courseId = parseInt(params['id']);
+        });
     }
-    CourceDetailComponent.prototype.ngOnInit = function () { };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', cource_1.Cource)
-    ], CourceDetailComponent.prototype, "cource", void 0);
+    CourceDetailComponent.prototype.ngOnInit = function () {
+        this.route.data.forEach(function (data) {
+            //this.editName = data.crisis.name;
+            //this.cource = data.cource;
+        });
+    };
+    CourceDetailComponent.prototype.gotoHeroes = function () { this.router.navigate(['/cources']); };
     CourceDetailComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -25,7 +33,7 @@ var CourceDetailComponent = (function () {
             templateUrl: 'cource-detail.component.html',
             styleUrls: ['cource-detail.component.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router])
     ], CourceDetailComponent);
     return CourceDetailComponent;
 }());

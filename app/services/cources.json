@@ -1,0 +1,22 @@
+[
+        {
+            "id": 1,
+            "name": "Routing"
+        },
+        {
+            "id": 2,
+            "name": "Index Route"
+        },
+        {
+            "id": 3,
+            "name": "Fallback Route"
+        },
+        {
+            "id": 4,
+            "name": "Shell Route"
+        },
+        {
+            "id": 5,
+            "name": "auxiliary Route"
+        }
+]

@@ -18,6 +18,7 @@ var cources_component_1 = require('./courses/cources.component');
 var aboutUs_component_1 = require('./aboutUs/aboutUs.component');
 var cource_detail_component_1 = require('./courses/cource-detail.component');
 var app_routing_1 = require('./app.routing');
+var http_1 = require('@angular/http');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,6 +26,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
+                http_1.HttpModule,
                 app_routing_1.routing],
             declarations: [app_component_1.AppComponent,
                 dashboard_component_1.DashboardComponent,
@@ -32,6 +34,7 @@ var AppModule = (function () {
                 cources_component_1.CourcesComponent,
                 aboutUs_component_1.AboutUsComponent,
                 cource_detail_component_1.CourceDetailComponent],
+            providers: [],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
