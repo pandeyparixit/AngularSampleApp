@@ -26,6 +26,10 @@ var CourcesService = (function () {
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
     };
+    CourcesService.prototype.getCource = function (id) {
+        return this.getCources().toPromise()
+            .then(function (cources) { return cources.find(function (cource) { return cource.id === id; }); });
+    };
     CourcesService.prototype.handleError = function (err) {
         console.log(err);
         return Rx_1.Observable.throw(err);

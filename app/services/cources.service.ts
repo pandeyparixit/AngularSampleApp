@@ -24,6 +24,11 @@ export class CourcesService {
            .catch(this.handleError)
      } 
 
+     getCource(id: number): Promise<Cource> {
+           return this.getCources().toPromise()
+             .then(cources => cources.find(cource => cource.id === id));
+     }
+
      handleError(err: any)
      {
          console.log(err);

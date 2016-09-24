@@ -44,14 +44,12 @@ export class CourcesComponent implements OnInit {
         //                             // Log errors if any
         //                             console.log(err);
         //                         });
-
-       
-       
-    
-
     onSelect(cource:Cource){
         this.selectedCource = cource;
-        //this.router.navigate([cource.id], { relativeTo: this.route });
+        this.router.navigate([cource.id], { relativeTo: this.route });
         //this.router.navigateByUrl(`/courses/${cource}`);
+
+        // let link = ['/detail', cource.id];
+        // this.router.navigate(link);
     }
 }

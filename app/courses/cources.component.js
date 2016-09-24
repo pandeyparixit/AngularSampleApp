@@ -34,8 +34,10 @@ var CourcesComponent = (function () {
     //                         });
     CourcesComponent.prototype.onSelect = function (cource) {
         this.selectedCource = cource;
-        //this.router.navigate([cource.id], { relativeTo: this.route });
+        this.router.navigate([cource.id], { relativeTo: this.route });
         //this.router.navigateByUrl(`/courses/${cource}`);
+        // let link = ['/detail', cource.id];
+        // this.router.navigate(link);
     };
     CourcesComponent = __decorate([
         core_1.Component({
