@@ -19,6 +19,7 @@ import { Component } from '@angular/core';
             <li><a routerLink="/home">Home</a></li>
             <li><a routerLink="/cources">Cources</a></li>
             <li> <a routerLink="/aboutUs">AboutUs</a></li>
+             <li> <a routerLink="/feedback">Feedback</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">

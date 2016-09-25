@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent }      from './home/home.component';
 import { CourcesComponent }      from './courses/cources.component';
 import { AboutUsComponent }      from './aboutUs/aboutUs.component';
+import { FeedbackComponent }  from './feedback/feedback.component';
 
 import { CourceDetailComponent } from './courses/cource-detail.component'
 
@@ -26,7 +27,8 @@ import { HttpModule } from '@angular/http';
                   HomeComponent,
                   CourcesComponent,
                   AboutUsComponent,
-                  CourceDetailComponent],
+                  CourceDetailComponent,
+                  FeedbackComponent],
   providers:[],
   bootstrap:    [ AppComponent ]
 })

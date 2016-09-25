@@ -9,6 +9,7 @@ import { CourceDetailComponent }   from './courses/cource-detail.component';
 
 
 import { AboutUsComponent }   from './aboutUs/aboutUs.component';
+import { FeedbackComponent }  from './feedback/feedback.component';
 
 //index Route
 const indexRoute: Route ={
@@ -59,6 +60,10 @@ const appRoutes: Routes = [
    {
     path: 'aboutUs',
     component: AboutUsComponent
+  },
+  {
+    path: 'feedback',
+    component: FeedbackComponent
   },
   indexRoute,
   fallbackRoute //for unknow route, always apply in last because having top priority.

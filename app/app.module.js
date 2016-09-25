@@ -16,6 +16,7 @@ var dashboard_component_1 = require('./dashboard/dashboard.component');
 var home_component_1 = require('./home/home.component');
 var cources_component_1 = require('./courses/cources.component');
 var aboutUs_component_1 = require('./aboutUs/aboutUs.component');
+var feedback_component_1 = require('./feedback/feedback.component');
 var cource_detail_component_1 = require('./courses/cource-detail.component');
 var app_routing_1 = require('./app.routing');
 var http_1 = require('@angular/http');
@@ -33,7 +34,8 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 cources_component_1.CourcesComponent,
                 aboutUs_component_1.AboutUsComponent,
-                cource_detail_component_1.CourceDetailComponent],
+                cource_detail_component_1.CourceDetailComponent,
+                feedback_component_1.FeedbackComponent],
             providers: [],
             bootstrap: [app_component_1.AppComponent]
         }), 

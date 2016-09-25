@@ -1,0 +1,45 @@
+<div style="margin:Auto">
+<section class="sample-app-content" style="margin:50px auto 0px auto;">
+        <h1>Feedback</h1>
+   
+        <form #f="ngForm" autocomplete="off" novalidate>
+            <div class="form-group">
+                <input  placeholder="Email" class="form-control"
+                        id="email" name="email" [value]="feedback.email" (keyup.enter)="myEvent($event)" required>
+            </div>
+            <div class="form-group">
+                <input  placeholder="Twitter Account (optional)"
+                        class="form-control"
+                        id="twitterAcct" name="twitterAcct" [(ngModel)]="feedback.twitterAcct" required>
+            </div>  
+            <div class="form-group">
+                <textarea  maxlength="5000" id="userText" name="userText" 
+                         class="form-control"
+                        [(ngModel)]="feedback.userText" placeholder="Feedback" required>
+                </textarea>
+            </div>  
+                <div class="form-group">
+                    <label for="">Rating</label>
+                    <input type="radio" name="rating" [(ngModel)]="feedback.Rating"
+                           value="GOOD" id="good">Good
+                    
+                    <input type="radio" name="rating" [(ngModel)]="feedback.Rating"
+                            value="VERY GOOD" id="verygood">Very Good
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default" (click)="onSubmit()">Submit</button>
+            </div>
+        </form>
+
+   <div>
+       <!--{{f | json}} -->
+        <!--{{feedback | json}}-->
+      
+   </div>
+
+</section>
+
+</div>
+
+
+
